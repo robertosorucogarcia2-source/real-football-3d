@@ -1,0 +1,345 @@
+{
+  "season": "2026/27",
+  "lastUpdated": "2026-11-25",
+  "teams": [
+    {
+      "id": "real_madrid",
+      "name": "Real Madrid",
+      "formation": "4-3-3",
+      "players": [
+        {
+          "name": "Thibaut Courtois",
+          "number": 1,
+          "position": "GK",
+          "starter": true
+        },
+        {
+          "name": "Andriy Lunin",
+          "number": 13,
+          "position": "GK",
+          "starter": false
+        },
+        {
+          "name": "Raúl Asencio",
+          "number": 2,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Éder Militão",
+          "number": 3,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Dean Huijsen",
+          "number": 4,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Trent Alexander-Arnold",
+          "number": 12,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Ibrahima Konaté",
+          "number": 16,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Marc Cucurella",
+          "number": 17,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Álvaro Carreras",
+          "number": 18,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Antonio Rüdiger",
+          "number": 22,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Ferland Mendy",
+          "number": 23,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Denzel Dumfries",
+          "number": 24,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Jude Bellingham",
+          "number": 5,
+          "position": "MF",
+          "starter": true
+        },
+        {
+          "name": "Eduardo Camavinga",
+          "number": 6,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Federico Valverde",
+          "number": 8,
+          "position": "MF",
+          "starter": true
+        },
+        {
+          "name": "Aurélien Tchouaméni",
+          "number": 14,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Arda Güler",
+          "number": 15,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Bernardo Silva",
+          "number": 20,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Thiago Pitarch",
+          "number": 27,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Vinícius Júnior",
+          "number": 7,
+          "position": "FW",
+          "starter": true
+        },
+        {
+          "name": "Endrick",
+          "number": 9,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Kylian Mbappé",
+          "number": 10,
+          "position": "FW",
+          "starter": true
+        },
+        {
+          "name": "Rodrygo",
+          "number": 11,
+          "position": "FW",
+          "starter": true
+        },
+        {
+          "name": "Carlos Espí",
+          "number": 19,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Brahim Díaz",
+          "number": 21,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Yan Diomande",
+          "number": 25,
+          "position": "FW",
+          "starter": false
+        }
+      ]
+    },
+    {
+      "id": "barcelona",
+      "name": "FC Barcelona",
+      "formation": "4-3-3",
+      "players": [
+        {
+          "name": "Joan García",
+          "number": 1,
+          "position": "GK",
+          "starter": true
+        },
+        {
+          "name": "Wojciech Szczęsny",
+          "number": 13,
+          "position": "GK",
+          "starter": false
+        },
+        {
+          "name": "Dominik Livaković",
+          "number": 25,
+          "position": "GK",
+          "starter": false
+        },
+        {
+          "name": "João Cancelo",
+          "number": 2,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Alejandro Balde",
+          "number": 3,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Pau Cubarsí",
+          "number": 5,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Xavi Espart",
+          "number": 12,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Andreas Christensen",
+          "number": 15,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Gerard Martín",
+          "number": 18,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Jules Koundé",
+          "number": 23,
+          "position": "DF",
+          "starter": true
+        },
+        {
+          "name": "Eric García",
+          "number": 24,
+          "position": "DF",
+          "starter": false
+        },
+        {
+          "name": "Brian Fariñas",
+          "number": 4,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Gavi",
+          "number": 6,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Fermín López",
+          "number": 7,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Pedri",
+          "number": 8,
+          "position": "MF",
+          "starter": true
+        },
+        {
+          "name": "Rodri",
+          "number": 16,
+          "position": "MF",
+          "starter": true
+        },
+        {
+          "name": "Dani Olmo",
+          "number": 20,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Frenkie de Jong",
+          "number": 21,
+          "position": "MF",
+          "starter": true
+        },
+        {
+          "name": "Marc Bernal",
+          "number": 22,
+          "position": "MF",
+          "starter": false
+        },
+        {
+          "name": "Gabriel Jesus",
+          "number": 9,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Lamine Yamal",
+          "number": 10,
+          "position": "FW",
+          "starter": true
+        },
+        {
+          "name": "Raphinha",
+          "number": 11,
+          "position": "FW",
+          "starter": true
+        },
+        {
+          "name": "Karim Adeyemi",
+          "number": 14,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Anthony Gordon",
+          "number": 17,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Roony Bardghji",
+          "number": 19,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Jesse Bisiwu",
+          "number": 27,
+          "position": "FW",
+          "starter": false
+        },
+        {
+          "name": "Hamza Abdelkarim",
+          "number": 29,
+          "position": "FW",
+          "starter": false
+        }
+      ]
+    }
+  ],
+  "sources": [
+    "https://www.realmadrid.com/en-US/football/first-team/players",
+    "https://www.realmadrid.com/en-US/news/football/first-team/latest-news/dorsales-del-real-madrid-para-la-temporada-2026-27-10-08-2026",
+    "https://www.fcbarcelona.com/en/football/first-team/squad",
+    "https://www.fcbarcelona.com/en/news/4570894/202627-first-team-jersey-numbers-confirmed"
+  ],
+  "note": "Instantánea de referencia 2026/27. Los titulares marcados son sugeridos para el prototipo, no una alineación oficial confirmada."
+}
