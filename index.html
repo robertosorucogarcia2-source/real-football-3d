@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#650d16">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<title>REAL BET 3D</title>
+<style>
+:root{--red:#650d16;--red2:#991b27;--gold:#e7bd62;--gold2:#ffe4a0;--ink:#18090b;--panel:#2a1014;--muted:#d5bdb5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#5a121b 0,#21090e 48%,#100609 100%);color:#fff5e5;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+header{padding:18px 16px 12px;text-align:center;background:linear-gradient(180deg,#39080f,#650d16);border-bottom:2px solid var(--gold);box-shadow:0 5px 25px #0008}
+.brand{font-family:Georgia,serif;font-size:clamp(28px,8vw,42px);font-weight:900;letter-spacing:2px;color:var(--gold2);text-shadow:0 2px 0 #7d4c1a,0 5px 18px #000}
+.sub{font-size:11px;letter-spacing:3px;color:#f1d6a0}
+.balance{display:inline-flex;gap:8px;align-items:center;margin-top:12px;padding:8px 16px;border:1px solid var(--gold);border-radius:30px;background:#22090dbb;color:var(--gold2);font-weight:800}
+main{max-width:900px;margin:auto;padding:16px}
+.notice{font-size:12px;text-align:center;color:#e8cfa7;margin:8px 0 18px}
+h2{font-family:Georgia,serif;color:var(--gold2);font-size:22px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.game{border:1px solid #bd8e42;border-radius:16px;background:linear-gradient(145deg,#811a25,#310d14 75%);padding:16px 10px;text-align:center;min-height:126px;box-shadow:inset 0 1px #ffffff22,0 8px 18px #0005;cursor:pointer}
+.game:active,button:active{transform:scale(.98)}.emoji{font-size:34px}.game strong{display:block;color:var(--gold2);font-family:Georgia,serif;font-size:18px;margin:5px}
+.game small{color:#e7cdb0}
+.panel{margin-top:16px;padding:16px;border:1px solid #bd8e42;border-radius:16px;background:linear-gradient(145deg,#351117,#1b090d);box-shadow:0 10px 28px #0007}
+.hidden{display:none}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap;justify-content:center;margin:12px 0}
+button{border:1px solid var(--gold);border-radius:10px;background:linear-gradient(#d5a64f,#986322);color:#240b0d;font-weight:900;padding:11px 15px;font-size:14px;cursor:pointer}
+button.secondary{background:#45121a;color:#ffe6ae}
+input,select{background:#17070a;color:#fff1d7;border:1px solid #9c743d;border-radius:9px;padding:10px;width:110px}
+.result{min-height:48px;text-align:center;color:var(--gold2);font-weight:800;font-size:18px;margin:12px 0}
+.reels{display:flex;justify-content:center;gap:9px;margin:18px 0}.reel{font-size:42px;background:#fff1d6;color:#300b10;border:4px ridge #d6a34b;border-radius:12px;width:75px;height:76px;display:grid;place-items:center}
+.wheel{width:210px;height:210px;border-radius:50%;margin:16px auto;border:8px ridge #d5a64f;background:conic-gradient(#b51f2b 0 10%,#eee0bd 10% 20%,#171717 20% 30%,#b51f2b 30% 40%,#eee0bd 40% 50%,#171717 50% 60%,#b51f2b 60% 70%,#eee0bd 70% 80%,#171717 80% 90%,#b51f2b 90%);display:grid;place-items:center;box-shadow:0 0 25px #d5a64f55}
+.wheel span{background:#23090e;border:2px solid var(--gold);border-radius:50%;padding:22px;font-weight:900;font-size:20px}
+.cards{font-size:32px;letter-spacing:3px;text-align:center;margin:14px 0}
+footer{text-align:center;color:#bda69b;font-size:11px;padding:22px}
+@media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header><div class="brand">REAL BET 3D</div><div class="sub">CASINO CLÁSICO · ROJO & DORADO</div><div class="balance">🪙 <span id="balance">1000</span> monedas virtuales</div><div class="row" style="margin:12px 0 0"><button class="secondary" id="musicBtn" onclick="toggleMusic()">🔇 Activar música</button><button class="secondary" onclick="soundEffect(660,.12)">🔔 Probar sonido</button></div></header>
+<main>
+<div class="notice">Modo de demostración: solo monedas virtuales. No hay dinero real, depósitos ni retiros.</div>
+<section id="home"><h2>Bienvenido al casino</h2><div class="grid">
+<div class="game" onclick="openGame('slots')"><div class="emoji">🎰</div><strong>Tragamonedas</strong><small>Prueba tu suerte</small></div>
+<div class="game" onclick="openGame('roulette')"><div class="emoji">🎡</div><strong>Ruleta</strong><small>Rojo, negro o verde</small></div>
+<div class="game" onclick="openGame('dice')"><div class="emoji">🎲</div><strong>Dados</strong><small>Mayor o menor</small></div>
+<div class="game" onclick="openGame('poker')"><div class="emoji">🃏</div><strong>Póker</strong><small>Mano de cinco cartas</small></div>
+<div class="game" onclick="openGame('rewards')"><div class="emoji">🎁</div><strong>Premio diario</strong><small>Reclama tus monedas</small></div>
+<div class="game" onclick="openGame('stats')"><div class="emoji">🏆</div><strong>Estadísticas</strong><small>Tu progreso</small></div>
+</div></section>
+<section id="slots" class="panel hidden"><button class="secondary" onclick="home()">← Volver</button><h2>🎰 Tragamonedas</h2><div class="reels"><div class="reel" id="r1">🍒</div><div class="reel" id="r2">⭐</div><div class="reel" id="r3">💎</div></div><div class="row">Apuesta <input id="slotBet" type="number" min="10" max="500" value="50"></div><div class="row"><button onclick="spin()">GIRAR</button></div><div class="result" id="slotResult"></div></section>
+<section id="roulette" class="panel hidden"><button class="secondary" onclick="home()">← Volver</button><h2>🎡 Ruleta</h2><div class="wheel"><span id="wheelNum">?</span></div><div class="row"><label>Apuesta</label><input id="rouletteBet" type="number" min="10" max="500" value="50"><select id="rouletteChoice"><option value="red">Rojo</option><option value="black">Negro</option><option value="green">Verde</option></select></div><div class="row"><button onclick="playRoulette()">GIRAR RULETA</button></div><div class="result" id="rouletteResult"></div></section>
+<section id="dice" class="panel hidden"><button class="secondary" onclick="home()">← Volver</button><h2>🎲 Dados</h2><div class="cards" id="diceFaces">⚀　⚄</div><div class="row">Apuesta <input id="diceBet" type="number" min="10" max="500" value="50"><select id="diceChoice"><option value="high">Total mayor que 7</option><option value="low">Total menor que 7</option></select></div><div class="row"><button onclick="rollDice()">LANZAR</button></div><div class="result" id="diceResult"></div></section>
+<section id="poker" class="panel hidden"><button class="secondary" onclick="home()">← Volver</button><h2>🃏 Póker de cinco cartas</h2><div class="cards" id="pokerCards">🂠 🂠 🂠 🂠 🂠</div><div class="row">Costo de partida: 50 monedas</div><div class="row"><button onclick="dealPoker()">REPARTIR</button></div><div class="result" id="pokerResult"></div><div class="notice">Versión inicial simplificada: combina cartas iguales para obtener premios virtuales.</div></section>
+<section id="rewards" class="panel hidden"><button class="secondary" onclick="home()">← Volver</button><h2>🎁 Premio diario</h2><p style="text-align:center">Recibe 100 monedas virtuales una vez al día.</p><div class="row"><button onclick="dailyReward()">RECLAMAR 100</button></div><div class="result" id="rewardResult"></div></section>
+<section id="stats" class="panel hidden"><button class="secondary" onclick="home()">← Volver</button><h2>🏆 Tus estadísticas</h2><div class="result" id="statsText"></div><div class="row"><button class="secondary" onclick="resetGame()">Reiniciar demo</button></div></section>
+</main><footer>REAL BET 3D · Prototipo inicial para Android · Juego recreativo con saldo virtual</footer>
+<script>
+let balance=Number(localStorage.rbBalance||1000), played=Number(localStorage.rbPlayed||0), won=Number(localStorage.rbWon||0);
+const $=id=>document.getElementById(id);
+function save(){localStorage.rbBalance=balance;localStorage.rbPlayed=played;localStorage.rbWon=won;$('balance').textContent=balance}
+function bet(id){let n=Math.floor(Number($(id).value));if(!Number.isFinite(n)||n<10||n>500){alert('La apuesta debe ser de 10 a 500 monedas.');return 0}if(n>balance){alert('No tienes suficientes monedas.');return 0}balance-=n;played++;save();return n}
+function prize(n){balance+=n;won+=n;save()}
+function openGame(id){$('home').classList.add('hidden');document.querySelectorAll('.panel').forEach(x=>x.classList.add('hidden'));$(id).classList.remove('hidden');if(id==='stats')$('statsText').textContent=`Partidas jugadas: ${played} · Monedas ganadas: ${won} · Saldo: ${balance}`}
+function home(){document.querySelectorAll('.panel').forEach(x=>x.classList.add('hidden'));$('home').classList.remove('hidden')}
+function spin(){let n=bet('slotBet');if(!n)return;let s=['🍒','🍋','⭐','🔔','💎','7️⃣'];let a=[0,1,2].map(()=>s[Math.floor(Math.random()*s.length)]);['r1','r2','r3'].forEach((id,i)=>$(id).textContent=a[i]);let same=a[0]===a[1]&&a[1]===a[2], pair=new Set(a).size===2;let p=same?n*8:pair?n*2:0;if(p){prize(p);winSound()}else{loseSound()}$('slotResult').textContent=same?`¡JACKPOT! Ganaste ${p} monedas` :pair?`¡Dos iguales! Ganaste ${p} monedas`:'No hubo premio. ¡Inténtalo otra vez!'}
+function playRoulette(){let n=bet('rouletteBet');if(!n)return;let v=Math.floor(Math.random()*37),color=v===0?'green':v%2?'red':'black';$('wheelNum').textContent=v;$('rouletteResult').textContent=color==='green'?'Salió verde':`Salió ${color==='red'?'rojo':'negro'}`;if(color===$('rouletteChoice').value){let p=n*(color==='green'?14:2);prize(p);winSound();$('rouletteResult').textContent+=` · ¡Ganaste ${p} monedas!`}else{loseSound();$('rouletteResult').textContent+=' · No ganaste esta vez.'}}
+function rollDice(){let n=bet('diceBet');if(!n)return;let a=1+Math.floor(Math.random()*6),b=1+Math.floor(Math.random()*6),t=a+b;let faces=['⚀','⚁','⚂','⚃','⚄','⚅'];$('diceFaces').textContent=faces[a-1]+'　'+faces[b-1];let ok=$('diceChoice').value==='high'?t>7:t<7;$('diceResult').textContent=`Salió ${t}. `+(ok?`¡Ganaste ${n*2} monedas!`:'No ganaste.');if(ok){prize(n*2);winSound()}else loseSound()}
+function dealPoker(){let n=betAmount=50;if(balance<n){alert('No tienes suficientes monedas.');return}balance-=n;played++;let deck=[];let suits=['♠','♥','♦','♣'];for(let s of suits)for(let v=1;v<=13;v++)deck.push({v,s});deck.sort(()=>Math.random()-.5);let hand=deck.slice(0,5);$('pokerCards').textContent=hand.map(c=>(c.v===1?'A':c.v===11?'J':c.v===12?'Q':c.v===13?'K':c.v)+c.s).join('　');let counts={};hand.forEach(c=>counts[c.v]=(counts[c.v]||0)+1);let max=Math.max(...Object.values(counts));let p=max>=4?500:max===3?180:max===2?80:0;if(p){prize(p);winSound()}else loseSound();save();$('pokerResult').textContent=p?`¡Buena mano! Premio: ${p} monedas.`:'Sin combinación premiada. ¡Suerte en la próxima!'}
+function dailyReward(){let today=new Date().toDateString();if(localStorage.rbDaily===today){$('rewardResult').textContent='Ya reclamaste tu premio de hoy.';return}localStorage.rbDaily=today;prize(100);$('rewardResult').textContent='¡Recibiste 100 monedas virtuales!'}
+function resetGame(){if(confirm('¿Reiniciar el saldo y las estadísticas?')){balance=1000;played=0;won=0;localStorage.removeItem('rbDaily');save();$('statsText').textContent='Demo reiniciada. Saldo inicial: 1000 monedas.'}}
+
+let audioCtx=null, musicOn=false, musicTimer=null, musicStep=0;
+function audioReady(){
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return null;
+  if(!audioCtx)audioCtx=new AC();
+  if(audioCtx.state==='suspended')audioCtx.resume();
+  return audioCtx;
+}
+function tone(freq=440,duration=.14,type='sine',volume=.07,delay=0){
+  const ctx=audioReady(); if(!ctx)return;
+  const osc=ctx.createOscillator(), gain=ctx.createGain();
+  osc.type=type; osc.frequency.setValueAtTime(freq,ctx.currentTime+delay);
+  gain.gain.setValueAtTime(.0001,ctx.currentTime+delay);
+  gain.gain.exponentialRampToValueAtTime(volume,ctx.currentTime+delay+.015);
+  gain.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+delay+duration);
+  osc.connect(gain); gain.connect(ctx.destination);
+  osc.start(ctx.currentTime+delay); osc.stop(ctx.currentTime+delay+duration+.03);
+}
+function soundEffect(freq=660,duration=.12){
+  tone(freq,duration,'triangle',.09);
+}
+function winSound(){
+  [523,659,784,1047].forEach((f,i)=>tone(f,.2,'triangle',.08,i*.11));
+}
+function loseSound(){
+  [330,247].forEach((f,i)=>tone(f,.22,'sine',.055,i*.15));
+}
+function toggleMusic(){
+  audioReady(); musicOn=!musicOn;
+  $('musicBtn').textContent=musicOn?'🎵 Música activada':'🔇 Activar música';
+  if(musicOn){
+    const notes=[196,247,294,247,220,262,330,262];
+    musicTimer=setInterval(()=>{
+      if(!musicOn)return;
+      tone(notes[musicStep%notes.length],.32,'sine',.022);
+      if(musicStep%4===0)tone(98,.38,'triangle',.018);
+      musicStep++;
+    },430);
+  }else{
+    clearInterval(musicTimer); musicTimer=null;
+  }
+}
+
+save();
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+}
+</script></body></html>
